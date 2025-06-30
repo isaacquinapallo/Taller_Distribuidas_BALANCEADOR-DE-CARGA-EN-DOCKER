@@ -1,15 +1,15 @@
 # Taller_Distribuidas_BALANCEADOR-DE-CARGA-EN-DOCKER
 
-Este proyecto fue desarrollado como parte del taller de Sistemas Distribuidos, con el objetivo de implementar un **balanceador de carga utilizando Docker y Nginx**, que distribuya peticiones entre tres aplicaciones web HTML estáticas.
+Este proyecto fue desarrollado como parte del taller de Sistemas Distribuidos, con el objetivo de implementar un balanceador de carga utilizando Docker y Nginx, que distribuya peticiones entre tres aplicaciones web HTML estáticas.
 
-## 🔧 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Docker**
 - **Docker Compose**
 - **Nginx** (como balanceador de carga)
 - **Apache Httpd (httpd:alpine)** para servir cada aplicación
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 .
@@ -23,13 +23,13 @@ Este proyecto fue desarrollado como parte del taller de Sistemas Distribuidos, c
 │   └── index.html     --> Hoja de vida del Compañero 2
 ```
 
-## ⚙️ Descripción de servicios
+## Descripción de servicios
 
 - `nginx`: balanceador de carga que redirige solicitudes entre los contenedores `app1`, `app2` y `app3` de forma **round-robin**.
 - `app1`: contiene la hoja de vida de **Isaac Quinapallo**.
 - `app2` y `app3`: contienen las hojas de vida de los compañeros del grupo.
 
-## 🚀 Ejecución del proyecto
+## Ejecución del proyecto
 
 1. Clona el repositorio:
    ```bash
@@ -49,23 +49,9 @@ Este proyecto fue desarrollado como parte del taller de Sistemas Distribuidos, c
 
    Al recargar la página, Nginx distribuirá la carga entre `app1`, `app2` y `app3`.
 
-## 📸 Capturas (opcional)
-
-Puedes añadir capturas de las tres interfaces en los siguientes espacios:
-
-- `app1`: ![Hoja de vida Isaac](./screenshots/app1.png)
-- `app2`: ![Hoja de vida Compañero 1](./screenshots/app2.png)
-- `app3`: ![Hoja de vida Compañero 2](./screenshots/app3.png)
-
-## 👨‍💻 Integrantes
-
-- Isaac Quinapallo – Desarrollador principal
-- Compañero 1 – Colaborador de app2
-- Compañero 2 – Colaborador de app3
-
 ---
 
-### 📌 Notas
+### Notas
 
 - Asegúrate de que el puerto `8080` no esté en uso antes de ejecutar el proyecto.
 - Puedes modificar el archivo `nginx.conf` para cambiar el comportamiento del balanceador.
